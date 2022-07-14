@@ -1,0 +1,386 @@
+/* Paleta de colores y fuentes que se va a utilizar */
+:root{
+    --primary: #ffffff;
+    --secondary: #aaaaaa;
+    --white: #ffffff;
+    --black: #000000;
+
+    --font-primary: 'Open Sans', sans-serif;
+    --font-secondary: 'Albert Sans', sans-serif;
+}
+
+/*TODO: Globales */
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6{
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 130%;
+}
+p{
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 100%;
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+    font-family: var(--font-primary);
+}
+button{
+    color: var(--white);
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 85%;
+}
+
+/*TODO: Clases e ids */
+.headerContainer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: .5rem 1rem;
+}
+.headerContainer h2{
+    color: var(--white);
+}
+/* Nav */
+.menuContainer button{
+    border: none;
+    background-color: #6860c4;
+    padding: .7rem 1rem;
+    border-radius: 2rem;
+    box-shadow: 0px 2px 10px 1px black;
+}
+.navContainer{
+    display: none;
+}
+.ulContainer{
+    display: flex;
+}
+.ulContainer li{
+    margin: 0 1rem;
+}
+
+.mainContainer{
+    background-color: var(--secondary);
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.textMain{
+    color: var(--white);
+}
+.textMain h2{
+    font-style: italic;
+}
+.btnInfo a{
+    padding: .7rem 1.3rem;
+    border-radius: 1rem;
+    background-color: var(--black);
+    font-weight: 700;
+    font-size: 100%;
+    font-family: var(--font-secondary);
+}
+/* Seccion 1 */
+.section1Container .maxWidth{
+    background-color: red;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0 1rem;
+}
+.divSection1 h2{
+    margin-bottom: 1rem;
+    font-size: 120%;
+}
+.divSection1 p{
+    font-size: 89%;
+}
+.divSection1 p > br{
+    display: none;
+}
+/* Img */
+.section1Container img{
+    width: 100%;
+    object-fit: cover;
+}
+/* Article Container 1 */
+.articleContainer{
+    background-color: rgb(0, 0, 0);
+    color: var(--white);
+    padding: 1.4rem 0;
+}
+
+/* Section 2 */
+.car1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+.car1 img{
+    width: 20%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* Section 3 */
+.section3Container{
+    margin: 0 1rem;
+}
+.section3Container h2{
+    margin-top: 2.5rem;
+    font-size: 170%;
+}
+.card2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+.card2 img{
+    width: 20%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.textTitle2 h2{
+    font-size: 130%;
+    margin: 0 0 1rem 0;
+}
+/* section 4 */
+.section4Container{
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0 1rem;
+}
+.textSection4 h2{
+    font-size: 140%;
+    margin-bottom: 2rem;
+}
+.imagenSection4 img{
+    width: 100%;
+    object-fit: cover;
+}
+/* section 5 */
+.section5Container h2{
+    margin: 2rem 0;
+}
+.gridTemplate3{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.card3{
+    background-color: red;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+}
+.textTitle3 h2{
+    font-size: 100%;
+    margin: 0;
+}
+.textTitle3 p{
+    font-size: 80%;
+    margin-top: .4rem;
+}
+/* Article Premio Mercurio */
+
+/* Footer */
+.footerContainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* Quienes somos */
+.quienesSomosContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: auto;
+    padding: 0 1rem;
+}
+.quienesSomosContainer > h2{
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.quienesSomosContainer p{
+    text-align: left;
+}
+.quienesSomosContainer > a{
+    margin: 2rem auto 0 0;
+    background-color: var(--black);
+    border-radius: 2rem;
+    color: var(--white);
+    font-size: .91rem;
+    padding: .6rem 1rem;
+}
+/* Navegación footer */
+.navFooter{
+    padding: 2rem 1rem;
+    background-color: var(--black);
+}
+/* Copyright */
+.copyContainer{
+    padding: 2rem 1rem;
+    background-color: #6860c4;
+}
+/*TODO: Media queries */
+@media (min-width: 768px) {
+    /* Seccion 1 */
+    .section1Container .maxWidth{
+        padding: 0 1rem;
+    }
+    .divSection1 h2{
+        margin: 0 4rem 1rem 4rem;
+        font-size: 160%;
+    }
+    .divSection1 p{
+        font-size: 109%;
+    }
+    /* Img */
+    .section1Container img{
+        width: 90%;
+        object-fit: cover;
+    }
+    /* Ser Argentino */
+    .articleContainer{
+        padding: 6rem 2rem;
+    }
+    .articleContainer p{
+        font-size: 130%;
+    }
+    /* Section 2 */
+    .gridTemplate{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .car1{
+        margin-top: -2rem;
+    }
+    .car1 img{
+        width: 30%;
+    }
+    /* Section 3 */
+    .section3Container .tittleSection{
+        margin-bottom: 3rem;
+        margin-top: 4rem;
+    }
+    .gridTemplate2{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: auto;
+        max-width: 1024px;
+    }
+    .gridTemplate2 .card2{
+        width: 30%;
+        margin: 0 .4rem;
+        justify-content: flex-start;
+        margin-bottom: 5rem;
+    }
+    .textTitle2 h2{
+        font-size: 100%;
+        margin-bottom: .4rem;
+    }
+    /* Section 4 */
+    .textSection4{
+        max-width: 904px;
+        margin: auto;
+    }
+    /* section 5 */
+    .section5Container .tittleSection{
+        margin: 3rem 0;
+        font-size: 130%;
+    }
+    .gridTemplate3{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .card3{
+        padding: 4rem 0;
+    }
+    /* Footer */
+    .footerContainer{
+        background-color: aqua;
+    }
+    .quienesSomosContainer {
+        max-width: 500px;
+        margin-left: 10%;
+    }
+
+}
+/* mq 1024 */
+@media (min-width: 1024px) {
+    .section1Container{
+        background-color: red;
+    }
+    .maxWidth{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        padding: 0 1rem;
+        max-width: 1024px;
+        margin: auto;
+    }
+    .divSection1 h2{
+        margin: 0 4rem 1rem 4rem;
+        font-size: 170%;
+    }
+    .divSection1 p{
+        font-size: 109%;
+        margin: 0 2rem;
+    }
+    /* Img */
+    .section1Container img{
+        width: 80%;
+        object-fit: cover;
+    }
+    /* Articulo ser Argentino */
+    .articleContainer{
+        padding: 8rem 0;
+    }
+    /* Flex Section 3 */
+    .gridTemplate2 .card2{
+        width: 30%;
+        margin: 0 1rem;
+        justify-content: flex-start;
+        margin-bottom: 5rem;
+    }
+    .card2 h2{
+        font-size: 110%;
+    }
+    /* Grid template 3 */
+    .card3{
+        padding: 4rem;
+    }
+}
+/* mq 1400 */
+@media (min-width: 1400px) {
+    
+}
