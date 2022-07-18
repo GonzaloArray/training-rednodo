@@ -1,7 +1,7 @@
 /* Paleta de colores y fuentes que se va a utilizar */
 :root{
     --primary: #ffffff;
-    --secondary: #aaaaaa;
+    --secondary: #010b17;
     --white: #ffffff;
     --black: #000000;
 
@@ -23,7 +23,7 @@ li{
 h1, h2, h3, h4, h5, h6{
     text-align: center;
     font-family: var(--font-primary);
-    font-size: 130%;
+    font-size: 170%;
 }
 p{
     text-align: center;
@@ -54,8 +54,9 @@ button{
 
     margin: .5rem 1rem;
 }
-.headerContainer h2{
-    color: var(--white);
+.headerContainer h2, img{
+    width: 13rem;
+    text-align: left;
 }
 /* Nav */
 .menuContainer button{
@@ -76,30 +77,44 @@ button{
 }
 
 .mainContainer{
-    background-color: var(--secondary);
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    padding: 0 1rem;
 }
 .textMain{
     color: var(--white);
+    margin-bottom: 10rem;
 }
 .textMain h2{
+    margin-bottom: 6rem;
+}
+.textMain p{
     font-style: italic;
+    font-size: 150%;
 }
 .btnInfo a{
-    padding: .7rem 1.3rem;
-    border-radius: 1rem;
-    background-color: var(--black);
-    font-weight: 700;
+    padding: 1.1rem 1.8rem;
+    background-color: var(--secondary);
+    font-weight: 500;
     font-size: 100%;
-    font-family: var(--font-secondary);
+    font-family: var(--font-primary);
+    transition: .5s;
+}
+.btnInfo a:hover{
+    background-color: var(--white);
+    color: var(--secondary);
+    transition: .5s;
 }
 /* Seccion 1 */
 .section1Container .maxWidth{
-    background-color: red;
+    background-color: #dadada;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -251,6 +266,12 @@ button{
 }
 /*TODO: Media queries */
 @media (min-width: 768px) {
+    .mainContainer{
+        background-position: center;
+    }
+    .textMain h1{
+        font-size: 200%;
+    }
     /* Seccion 1 */
     .section1Container .maxWidth{
         padding: 0 1rem;
@@ -335,6 +356,44 @@ button{
 }
 /* mq 1024 */
 @media (min-width: 1024px) {
+    /* Header */
+    .headerContainer{
+        max-width: 1068px;
+        margin: auto;
+        padding: 1rem 0;
+        align-items: center;
+    }
+    .headerContainer img{
+        width: 17rem;
+    }
+    .menuContainer > button{
+        display: none;
+    }
+    .menuContainer > nav{
+        display: block;
+        margin-bottom: .7rem;
+    }
+    .ulContainer li > a{
+        font-size: .9rem;
+    }
+    /* Main */
+    .mainContainer{
+        background-size: cover;
+        background-position: 50% 25%;
+    }
+    .textMain h1{
+        font-size: 250%;
+    }
+    .textMain p{
+        font-size: 200%;
+    }
+    /* btnInfo */
+    .btnInfo a{
+        font-size: 100%;
+        padding: .9rem 2rem;
+    }
+
+    /* section 1 */
     .section1Container{
         background-color: red;
     }
@@ -382,5 +441,31 @@ button{
 }
 /* mq 1400 */
 @media (min-width: 1400px) {
-    
+    /* Main */
+    .headerContainer{
+        max-width: 1444px;
+        margin: auto;
+        padding: 1rem 0;
+        align-items: center;
+    }
+    .ulContainer li > a{
+        font-size: 1.1rem;
+    }
+    .mainContainer{
+        background-size: 103%;
+        background-position: 50% 14%;
+    }
+    .textMain h1{
+        font-size: 300%;
+    }
+    .textMain p{
+        font-size: 200%;
+    }
+    .btnInfo{
+        margin-top: 2rem;
+    }
+    .btnInfo a{
+        padding: .9rem 2.7rem;
+        font-size: 1.5rem;
+    }
 }
