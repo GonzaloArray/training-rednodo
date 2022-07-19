@@ -412,7 +412,7 @@ button{
     }
     /* Section 4 */
     .imagenWhite img{
-        width: 78%;
+        width: 74%;
         object-fit: cover;
         margin-bottom: 12.87%;
         margin-right: 2%;
@@ -465,7 +465,7 @@ button{
     }
 }
 /* mq 1024 */
-@media (min-width: 918px) {
+@media (min-width: 900px) {
     /* Header */
     .headerContainer{
         max-width: 1068px;
@@ -527,7 +527,7 @@ button{
         width: 70%;
     }
     .imagenWhite img{
-        width: 55%;
+        width: 58%;
         object-fit: cover;
         margin-bottom: 4.87%;
         margin-right: 2%;
