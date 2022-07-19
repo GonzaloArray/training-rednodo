@@ -523,10 +523,13 @@ button{
         margin: 0 2rem;
     }
     /* section 4 */
+    .imagenSection4 img{
+        width: 70%;
+    }
     .imagenWhite img{
-        width: 89%;
+        width: 55%;
         object-fit: cover;
-        margin-bottom: 13.87%;
+        margin-bottom: 4.87%;
         margin-right: 2%;
     }
     /* Img */
@@ -551,6 +554,11 @@ button{
     /* Grid template 3 */
     .card3{
         padding: 4rem;
+    }
+}
+@media (min-width: 1000px) {
+    .imagenWhite img{
+        width: 62%;
     }
 }
 /* mq 1400 */
