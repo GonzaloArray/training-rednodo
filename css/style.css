@@ -113,14 +113,21 @@ button{
     transition: .5s;
 }
 /* Seccion 1 */
+.section1Container{
+    background: rgb(254,251,251);
+    background: radial-gradient(circle, rgba(254,251,251,1) 0%, rgba(218,218,218,1) 100%);
+}
 .section1Container .maxWidth{
-    background-color: #dadada;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     height: 100vh;
     padding: 0 1rem;
+}
+.section1Container .divSection1 img{
+    object-fit: cover;
+    width: 100%;
 }
 .divSection1 h2{
     margin-bottom: 1rem;
@@ -139,12 +146,23 @@ button{
 }
 /* Article Container 1 */
 .articleContainer{
-    background-color: rgb(0, 0, 0);
+    background-image: url(/img/articleFondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--white);
-    padding: 1.4rem 0;
+    padding: 2.5rem 1rem;
 }
 
 /* Section 2 */
+.section2Container{
+    background-color: #f7f7f7;
+}
+.gridTemplate{
+    margin: auto;
+    max-width: 1024px;
+}
 .car1{
     display: flex;
     justify-content: center;
@@ -153,7 +171,7 @@ button{
     margin: 2rem 0;
 }
 .car1 img{
-    width: 20%;
+    width: 70%;
     object-fit: cover;
     margin-bottom: 1rem;
 }
@@ -184,21 +202,65 @@ button{
 }
 /* section 4 */
 .section4Container{
-    background-color: var(--secondary);
+    background-color: #f7f7f7;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    padding: 0 1rem;
+    width: 100%;
+
+    background-image: url(../img/fondoSection4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
 }
 .textSection4 h2{
     font-size: 140%;
-    margin-bottom: 2rem;
+    margin: 0 1rem 2rem 1rem;
 }
+.textSection4 p{
+    margin: 0 1rem;
+}
+.imagenSection4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 1rem;
+}
+
 .imagenSection4 img{
-    width: 100%;
+    margin-bottom: 10vh;
     object-fit: cover;
+    width: 100%;
+}
+.imagenWhite{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 15%;
+}
+.imagenWhite img{
+    width: 73%;
+    border: 10px solid #353535;
+}
+/* Articulo2 */
+.articleContainer2{
+    background-image: url(/img/premio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left;
+    color: var(--white);
+    padding: 6rem 1rem;
+}
+.articleContainer2 p{
+    font-size: 140%;
+    color: #c0bcbc;
+}
+.articleContainer2 strong{
+    color: var(--white);
 }
 /* section 5 */
 .section5Container h2{
@@ -234,35 +296,55 @@ button{
 /* Quienes somos */
 .quienesSomosContainer{
     display: flex;
-    justify-content: center;
-    flex-direction: column;
     flex: auto;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
+    background-image: url(../img/quienes.jpg);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
 }
-.quienesSomosContainer > h2{
+.quienesSomosChild{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.quienesSomosContainer h2{
     text-align: left;
     margin-bottom: 2rem;
+    color: var(--white);
 }
 .quienesSomosContainer p{
     text-align: left;
+    color: var(--white);
 }
-.quienesSomosContainer > a{
+.quienesSomosContainer a{
     margin: 2rem auto 0 0;
     background-color: var(--black);
-    border-radius: 2rem;
+    border: 1px solid var(--white);
     color: var(--white);
     font-size: .91rem;
-    padding: .6rem 1rem;
+    padding: .8rem 1.2rem;
 }
 /* Navegación footer */
 .navFooter{
-    padding: 2rem 1rem;
     background-color: var(--black);
+    padding: 2rem 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: right;
+}
+.redSocial a{
+    font-size: 1.5rem;
 }
 /* Copyright */
 .copyContainer{
     padding: 2rem 1rem;
-    background-color: #6860c4;
+    background-color: var(--white);
+}
+.copyContainer p{
+    color: var(--black);
 }
 /*TODO: Media queries */
 @media (min-width: 768px) {
@@ -304,7 +386,7 @@ button{
         margin-top: -2rem;
     }
     .car1 img{
-        width: 30%;
+        width: 70%;
     }
     /* Section 3 */
     .section3Container .tittleSection{
@@ -329,6 +411,12 @@ button{
         margin-bottom: .4rem;
     }
     /* Section 4 */
+    .imagenWhite img{
+        width: 78%;
+        object-fit: cover;
+        margin-bottom: 12.87%;
+        margin-right: 2%;
+    }
     .textSection4{
         max-width: 904px;
         margin: auto;
@@ -345,17 +433,39 @@ button{
         padding: 4rem 0;
     }
     /* Footer */
-    .footerContainer{
-        background-color: aqua;
-    }
-    .quienesSomosContainer {
+    .quienesSomosChild {
         max-width: 500px;
         margin-left: 10%;
     }
-
+    .navFooter{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+    }
+    .linksNavegador{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .linksNavegador li{
+        margin: 0 .8rem;
+    }
+    .navFooter{
+        flex-direction: row;
+    }
+    .redSocial{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .redSocial li{
+        color: var(--white);
+        margin: 0 .5rem;
+    }
 }
 /* mq 1024 */
-@media (min-width: 1024px) {
+@media (min-width: 918px) {
     /* Header */
     .headerContainer{
         max-width: 1068px;
@@ -394,9 +504,6 @@ button{
     }
 
     /* section 1 */
-    .section1Container{
-        background-color: red;
-    }
     .maxWidth{
         display: flex;
         justify-content: space-evenly;
@@ -414,6 +521,13 @@ button{
     .divSection1 p{
         font-size: 109%;
         margin: 0 2rem;
+    }
+    /* section 4 */
+    .imagenWhite img{
+        width: 89%;
+        object-fit: cover;
+        margin-bottom: 13.87%;
+        margin-right: 2%;
     }
     /* Img */
     .section1Container img{
@@ -467,5 +581,10 @@ button{
     .btnInfo a{
         padding: .9rem 2.7rem;
         font-size: 1.5rem;
+    }
+    /* Section 4 */
+    .imagenWhite img{
+        width: 90%;
+        margin-bottom: 14%;
     }
 }
