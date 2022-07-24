@@ -48,13 +48,15 @@ button{
     left: 0;
     right: 0;
     top: 0;
-
+    z-index: 2;
+}
+.headerWith{
     display: flex;
     justify-content: space-between;
 
-    margin: .5rem 1rem;
+    padding: .5rem 1rem;
 }
-.headerContainer h2, img{
+.headerWith h2, img{
     width: 13rem;
     text-align: left;
 }
@@ -73,7 +75,7 @@ button{
     display: flex;
 }
 .ulContainer li{
-    margin: 0 1rem;
+    margin: 0 .6rem;
 }
 
 .mainContainer{
@@ -407,6 +409,9 @@ button{
     background-color: var(--white);
 }
 .copyContainer p{
+    max-width: 1024px;
+    margin: auto;
+    text-align: left;
     color: var(--black);
 }
 /*TODO: Media queries */
@@ -546,13 +551,13 @@ button{
 /* mq 1024 */
 @media (min-width: 900px) {
     /* Header */
-    .headerContainer{
+    .headerWith{
         max-width: 1068px;
         margin: auto;
-        padding: 1rem 0;
+        padding: .4rem 0;
         align-items: center;
     }
-    .headerContainer img{
+    .headerWith img{
         width: 17rem;
     }
     .menuContainer > button{
@@ -644,10 +649,10 @@ button{
 /* mq 1400 */
 @media (min-width: 1400px) {
     /* Main */
-    .headerContainer{
+    .headerWith{
         max-width: 1444px;
         margin: auto;
-        padding: 1rem 0;
+        padding: .3rem 0;
         align-items: center;
     }
     .ulContainer li > a{
@@ -677,4 +682,21 @@ button{
         margin-left: .8%;
     }
 
+}
+
+/* TODO: JS cambios en el DOM */
+.headerContainer.abajo{
+    background-color: var(--white);
+}
+.abajo a{
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.abajo img{
+    background-color: cadetblue;
+    border-radius: 2rem;
+    padding: .2rem 1rem;
+    width: 80%;
 }
