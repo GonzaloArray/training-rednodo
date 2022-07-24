@@ -207,8 +207,8 @@ button{
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
     width: 100%;
+    padding-top: 4rem;
 
     background-image: url(../img/fondoSection4.jpg);
     background-size: cover;
@@ -259,23 +259,32 @@ button{
     font-size: 140%;
     color: #c0bcbc;
 }
+
 .articleContainer2 strong{
     color: var(--white);
 }
+.tittleSection{
+    font-size: 140%;
+    padding: 2rem 0;
+}
 /* section 5 */
-.section5Container h2{
+.gridTemplate3 h2{
     margin: 2rem 0;
+    color: var(--primary);
+}
+.gridTemplate3 p{
+    color: var(--primary);
 }
 .gridTemplate3{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 .card3{
-    background-color: red;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 2rem;
+    height: 13vh;
 }
 .textTitle3 h2{
     font-size: 100%;
@@ -285,6 +294,56 @@ button{
     font-size: 80%;
     margin-top: .4rem;
 }
+/* Servicios especiales */
+.card3.imagen-1{
+    background-image: url(../img/img10.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card3.imagen-2{
+    background-image: url(../img/img11.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card3.imagen-3{
+    background-image: url(../img/img12.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card3.imagen-4{
+    background-image: url(../img/img13.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card3.imagen-5{
+    background-image: url(../img/img14.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card3.imagen-6{
+    background-image: url(../img/img15.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card3.imagen-7{
+    background-image: url(../img/img16.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card3.imagen-8{
+    background-image: url(../img/img17.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 /* Article Premio Mercurio */
 
 /* Footer */
@@ -328,12 +387,16 @@ button{
 /* Navegación footer */
 .navFooter{
     background-color: var(--black);
+}
+.separadorContainer{
     padding: 2rem 1.3rem;
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
     align-items: center;
     text-align: right;
+    max-width: 1024px;
+    margin: auto;
 }
 .redSocial a{
     font-size: 1.5rem;
@@ -383,10 +446,10 @@ button{
         grid-template-columns: repeat(3, 1fr);
     }
     .car1{
-        margin-top: -2rem;
+        margin-top: -3rem;
     }
     .car1 img{
-        width: 70%;
+        width: 90%;
     }
     /* Section 3 */
     .section3Container .tittleSection{
@@ -431,17 +494,36 @@ button{
     }
     .card3{
         padding: 4rem 0;
+        height: 10vh;
+    }
+    /* Servicios Especiales */
+    /* Articulo2 */
+    .articleContainer2{
+        padding: 4rem 1rem;
+    }
+    .articleContainer2 p{
+        text-align: right;
+        max-width: 1124px;
+        margin: auto;
+    }
+    .articleContainer2 span{
+        display: block;
+    }
+    .tittleSection{
+        font-size: 140%;
+        padding: 2rem 0;
     }
     /* Footer */
     .quienesSomosChild {
         max-width: 500px;
         margin-left: 10%;
     }
-    .navFooter{
+    .separadorContainer{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 2rem;
+        padding: 2rem 0;
+        flex-direction: row;
     }
     .linksNavegador{
         display: flex;
@@ -450,9 +532,6 @@ button{
     }
     .linksNavegador li{
         margin: 0 .8rem;
-    }
-    .navFooter{
-        flex-direction: row;
     }
     .redSocial{
         display: flex;
@@ -554,6 +633,7 @@ button{
     /* Grid template 3 */
     .card3{
         padding: 4rem;
+        height: 25vh;
     }
 }
 @media (min-width: 1000px) {
@@ -592,7 +672,9 @@ button{
     }
     /* Section 4 */
     .imagenWhite img{
-        width: 90%;
-        margin-bottom: 14%;
+        width: 60%;
+        margin-bottom: 7%;
+        margin-left: .8%;
     }
+
 }
